@@ -1,0 +1,34 @@
+<h1>Customer details</h1>
+<ul>
+  <li *ngFor="let cmr of Customer">
+    {{cmr.name}} {{cmr.country}} {{cmr.age}}
+  </li>
+</ul>
+<!--basic @ngfor command to display an array defined in component with index-->
+<ul>
+  <li *ngFor="let cmr of Customer;let i=index">
+    {{i+1}}- {{cmr.name}} {{cmr.country}} {{cmr.age}}
+  </li>
+</ul>
+<!--grouping or nested itaration-->
+<ul>
+  <li *ngFor="let group of studentbyCountry">
+    {{group.country}}
+    <ul>
+      <li *ngFor="let stu of group.student">
+        {{student.name}} {{dentis.age}}
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<ul>
+  <li *ngFor="let group of studentbyCountry">
+    {{group.country}}
+    <ul>
+      <li *ngFor="let stu of group.student">
+        {{stu1.Name}} {{stu2.Age}}
+      </li>
+    </ul>
+  </li>
+</ul>

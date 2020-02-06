@@ -1,0 +1,21 @@
+<p>assignment-details works!</p>
+<div>
+<table>
+    <tr>
+        <td>UserName</td>
+        <td><input type="text"[(ngModel)]='item.Username'></td>
+    </tr>
+    <tr>
+        <td>Password</td>
+        <td><input type="text"[(ngModel)]='item.Password'td>
+
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button (click)='Login()'>Login</button>
+        </td>
+    </tr>
+</table>
+{{item.Output}}
+</div>
+

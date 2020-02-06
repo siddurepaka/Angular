@@ -1,0 +1,47 @@
+<p>assignment works!</p>
+<div>
+    <table>
+    <tr>   
+        <td>ProjectID</td>
+        <td><input type="text" [(ngModel)]="ProjectID"></td>
+    </tr>
+    <tr>
+        <td>ProjectName</td>
+        <td><input type="text" [(ngModel)]="ProjectName"></td>
+    </tr>
+    <tr>   
+        <td>Domain</td>
+        <td><select [(ngModel)]="ProjectDomain">
+            <option>.Net</option>
+            <option>Selinium</option>
+        </select></td>
+    </tr>
+    <tr>
+        <td>ProjectStartDate</td>
+        <td><input type="date"[(ngModel)]="StartDate"></td>
+    </tr>
+    <tr>
+        <td>ProjectEndDate</td>
+        <td><input type="date"[(ngModel)]="EndDate"></td>
+    </tr>
+    <tr>
+        <button (click)='submit()'>Submit</button>
+    </tr>
+    </table>
+</div>
+<table border="1">
+    <tr>
+   <th>ProjectID</th>
+   <th>ProjectName</th>
+   <th>ProjectDomain</th>
+   <th>StartDate</th>
+   <th>EndDate</th>
+    </tr>
+    <tr *ngFor="let item of list">
+        <td>{{pro.ProjectID}}</td>
+        <td>{{pro.ProjectName}}</td>
+        <td>{{pro.ProjectDomain}}</td>
+        <td>{{pro.StartDate}}</td>
+        <td>{{pro.EndDate}}</td>
+    </tr>
+</table>

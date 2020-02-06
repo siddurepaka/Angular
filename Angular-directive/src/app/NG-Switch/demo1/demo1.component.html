@@ -1,0 +1,9 @@
+<p>demo1 works!</p>
+<select [(ngModel)]="SelectedValue">
+    <option *ngFor="let item of items;" [value]="item.name">{{item.name}}</option>
+</select>
+<div class='row'[ngSwitch]="SelectedValue">
+    <div *ngSwitchCase="'one'">One is Pressed</div>
+    <div *ngSwitchCase="'two'">Two is Pressed</div>
+    <div *ngSwitchDefault>Default Option</div>
+</div>
